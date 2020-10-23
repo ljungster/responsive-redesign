@@ -2,13 +2,75 @@
 
 <html>
   <head>
-    <title>INSERT TITLE HERE!</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="index.css">
     <!-- TODO: add additional links here! e.g. fonts, icons, more stylesheets, etc. -->
     <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
-    <!-- TODO: put your HTML code here! -->
+    <div class="container">
+      <div class="topnav" id="myTopnav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact" class="active">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="notification">
+        <div class="contact-us">
+          <h1>Contact Us</h1>
+          <hr class="new">
+        </div>
+        <div class="corona"><i class="material-icons red">announcement</i>Due to COVID-19, <b>all of our offices are currently closed.</b> In addition, due to our limited number of employees, there is no one answering the office phones. If you need to speak with someone on the phone, call our general support line below.</div>
+        <div class="first-time">If this is your first time interacting with the Cook County Recorder of Deeds or you are unsure about whether we can assist you, please visit our Frequently Asked Questions page.</div>
+      </div>
+      <div class="general">
+          <h1>For General Support</h1>
+          <ul class="general-icons">
+            <li class="call"> (312) 603–5050</li>
+            <li class="email"> ROD.support@CookCountyIL.gov</li>
+            <li class="place"> All of our offcies are currently closed. See our Locations</li>
+          </ul>
+      </div>
+      <div class="specific">
+        <h1>For Specific Services</h1>
+        <div class="recording-information">
+          <h2>Recording Information:</h2>
+          <ul>
+            <li class="email">ROD.faq@CookCountyIL.gov</li>
+          </ul>
+        </div>
+        <div class="web-support">
+          <h2>Website Support or Media Inquiry:</h2>
+          <ul>
+            <li class="info">If you are reaching out to us with a media inquiry, please put “MEDIA REQUEST” in the subject line. This will put you in contact with our office spokesperson.</li>
+            <li class="email">ROD.support@CookCountyIL.gov</li>
+          </ul>
+        </div>
+        <div class="foia">
+          <h2>Submit a FOIA Request:</h2>
+          <ul>
+            <li class="info">Please view our FOIA Guide page before submitting your request.</li>
+            <li class="email">FOIA.ROD@CookCountyIL.gov</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+      </script>
   </body>
 </html>

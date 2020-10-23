@@ -1,1 +1,196 @@
 /* Put your style information here! */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "nav nav nav nav"
+        ". notification notification ."
+        ". general specific ."
+        ". . specific ."
+        ". . . .";
+    grid-template-columns: 1fr 25rem 25rem 1fr;
+    grid-template-rows: 3rem 20rem 15rem 15rem 1fr;
+    grid-gap: 1rem;
+}
+
+.notification {
+    display: flex;
+    flex-flow: column;
+    grid-area: notification;
+    justify-content: center;
+}
+
+.general {
+    grid-area: general;
+    display: flex;
+    flex-flow: column;
+    background-color: #F2F2F2;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+}
+
+.specific {
+    background-color: #F2F2F2;
+    grid-area: specific;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.corona {
+    border: 2px; 
+    border-style: solid;
+    border-color: #AF2222;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.corona, .first-time {
+    margin-bottom: 10px;
+    align-self: center;
+    max-width: 600px;
+}
+
+hr {
+    width: 50px;
+    height: 10px;
+    background-color: #1A2E97;
+    border: 0px;
+    margin-bottom: 20px;
+}
+
+.material-icons.red { 
+    font-size: 36px; 
+    padding-right: 10px;
+    color: #AF2222;
+}
+
+.container li {
+    list-style: none;
+    list-style-position: outside;
+    margin-bottom: 10px;
+}
+
+li.call::before {
+    font-family: Material Icons;
+    padding-right: 10px;
+    content: '\e0b0';
+    color: blue;
+    font-size: 20px;
+}
+
+li.email::before {
+    font-family: Material Icons;
+    padding-right: 10px;
+    content: '\e0be';
+    color: blue;
+    font-size: 20px;
+}
+
+li.place::before {
+    font-family: Material Icons;
+    padding-right: 10px;
+    content: '\e55f';
+    color: blue;
+    font-size: 20px;
+}
+
+li.info::before {
+    font-family: Material Icons;
+    padding-right: 10px;
+    content: '\e88e';
+    color: blue;
+    font-size: 20px;
+}
+
+.contact-us h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.2rem;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #1A2E97;
+    overflow: hidden;
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+}
+  
+  /* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+  /* Change the color of links on hover */
+.topnav a:hover {
+    background-color: white;
+    color: #1A2E97;
+}
+  
+  /* Add an active class to highlight the current page */
+.topnav a.active {
+    background-color: white;
+    color: #1A2E97;
+}
+  
+  /* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 500px) {
+    .topnav a {display: none;}
+    .topnav a.icon {
+      float: center;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 500px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        grid-template-areas: 
+        "nav"
+        "notification"
+        "general"
+        "specific";
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem 0.5fr 0.5fr 0.5fr;
+    grid-gap: 10px;
+    }
+
+    .specific {
+        background-color: white;    
+    }
+
+    .general, .specific {
+        justify-self: center;
+        max-width: 500px;
+    }
+}
